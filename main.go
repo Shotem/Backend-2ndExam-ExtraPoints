@@ -16,8 +16,8 @@ func main() {
 
 	r.POST("/post", func(c echo.Context) error {
 
-		value := c.FormValue("Value")
-		return c.String(http.StatusAccepted, "Post Realizado Correctamente con valor "+value)
+		value := c.FormValue("val")
+		return c.String(http.StatusAccepted, "Post Realizado Correctamente con valor: "+value)
 	})
 
 	e.Logger.Fatal(e.Start(":1323"))
